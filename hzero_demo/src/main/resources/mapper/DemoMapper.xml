@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hand.demo.infra.mapper.DemoMapper">
+
+
+    <select id="selectDemo" resultType="com.hand.demo.domain.entity.Demo">
+        <bind name="lang" value="@io.choerodon.mybatis.helper.LanguageHelper@language()"/>
+        SELECT
+        t.id,
+        ttl.multi_lang
+        -- other column ..
+        FROM test_demo t
+        JOIN test_demo_tl ttl ON t.id = ttl.id AND ttl.lang = #{lang}
+        WHERE t.id = #{id}
+        -- condition
+    </select>
+
+</mapper>
