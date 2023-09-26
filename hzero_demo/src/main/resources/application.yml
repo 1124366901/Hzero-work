@@ -78,3 +78,9 @@ logging:
     org.apache.ibatis: info
     io.choerodon: debug
     org.hzero: debug
+
+
+hzero:
+  import:
+    batch-size: 3000
+    transaction-control: true

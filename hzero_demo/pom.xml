@@ -62,6 +62,15 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.hzero.boot</groupId>
+            <artifactId>hzero-boot-message</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hzero.boot</groupId>
+            <artifactId>hzero-boot-import</artifactId>
+            <version>${hzero.boot.version}</version>
+        </dependency>
             <!-- eureka discovery and choerodon config -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
